@@ -10,16 +10,43 @@ import CloseBtn from './Back-body/CloseBtn';
 
 class App extends Component {
 
+  state={
+    sideDrawerOpen:false,
+    filterMenuOpen:false
+}
+openClickMenu = () => {
+    this.setState((pervState) => ({
+        sideDrawerOpen:!pervState.sideDrawerOpen
+    }))
+}
+openFilter = () => {
+  this.setState((pervState) => ({
+    filterMenuOpen:!pervState.filterMenuOpen
+  }))
+}
+closeClickBtn = () => {
+  this.setState({
+    sideDrawerOpen:false,
+    filterMenuOpen:false
+  })
+}
   render() {
 
   
     return (
       <>
-        <Header/>
-        <Main />
+        <Header
+        openClickMenu={this.openClickMenu}
+        show={this.state.sideDrawerOpen}/>
+        <Main 
+        openFilter={this.openFilter}
+        filterState={this.state.filterMenuOpen}/>
         <Footer/>
         <BackBody />
-        <CloseBtn />
+        <CloseBtn 
+        show={this.state.sideDrawerOpen}
+        filterState={this.state.filterMenuOpen}
+        close={this.closeClickBtn}/>
       </>
     )
   }

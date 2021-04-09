@@ -1,8 +1,17 @@
 import React from 'react'
 
-const CloseBtn = () => {
+const CloseBtn = ({
+    show,
+    close,
+    filterState
+}) => {
+    let activeMenuBtn = "close-btn display-none"
+    if(show || filterState) {
+        activeMenuBtn = "close-btn display-none close-btn-active"
+    }
+    
     return (
-        <div className="close-btn display-none">
+        <div className={activeMenuBtn} onClick={close}>
             <div>
                 <span />
                 <span />
