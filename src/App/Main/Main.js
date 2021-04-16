@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Switch} from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
-import BlogPost from './PostFolder/BlogPost'
-import ReadMorePage from '../Component/ReadMore/ReadMorePage'
+import {BlogPost,ReadMorePage} from './PostFolder/BlogPost'
+
 
 const Main = ({
     openFilter,

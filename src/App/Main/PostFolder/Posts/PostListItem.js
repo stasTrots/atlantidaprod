@@ -37,7 +37,7 @@ class PostListItem extends Component {
                     </div>
                     <div className="categ">
                         <img src="image/categ.png" alt="" className="item-set-img" />
-                        <a href="/" className="item-set-text">{categor}</a>
+                        <a href="/" className="item-set-text item-set-text-categor">{categor}</a>
                     </div>
                 </div>
                 <div className="item-text">

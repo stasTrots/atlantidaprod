@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 
 const BurgerMenu = ({
@@ -23,7 +23,7 @@ const BurgerMenu = ({
                     <Link to="/" className="list-style">team</Link>
                     <Link to="/" className="list-style">portfolio</Link>
                     <Link to="/" className="list-style">prices</Link>
-                    <Link to="/postlist" className="list-style">blog</Link>
+                    <NavLink to="/postlist" exact className="list-style">blog</NavLink>
                     <Link to="/" className="list-style">contact</Link>
                     <div className="mereji">
                         <img src="image/icon_foot_1.png" alt="" className="meregi-img" />

@@ -7,6 +7,8 @@ import OurTeam from './Sections/OutTeam'
 import Prices from './Sections/Prices'
 import Servis from './Sections/Servis'
 import History from './Sections/History'
+import Rtl from '../../Component/Slider/SliderFoot'
+// import SliderPromo from '../../Component/Slider/SliderPromo'
 const HomePage = () => {
     return (
         <>
@@ -17,6 +19,7 @@ const HomePage = () => {
             <BlogMain/>
             <Prices/>
             <Clients/>
+            <Rtl/>
         </>
     )
 }

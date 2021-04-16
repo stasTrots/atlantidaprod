@@ -89,7 +89,7 @@ const PostPage = () => {
                                     <p>Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.</p>
                                 </div>
                                 <div className="reply">
-                                    <img src="images/reply.png" alt=""/>
+                                    <img src="image/reply.png" alt=""/>
                                     <i>Reply</i>
                                 </div>
                             </div>

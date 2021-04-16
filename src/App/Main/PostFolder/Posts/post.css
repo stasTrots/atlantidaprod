@@ -10,6 +10,15 @@
 .item-name > h3 {
     font-size: 16px;
     font-weight: 700;
+    
+}
+.item-name > h3 > a {
+    text-decoration: none;
+    color: black;
+ 
+}
+.item-name > h3 > a:hover {
+    text-decoration: underline;
 }
 .item-name > i {
     font-family: 'Crimson Text', serif;
@@ -38,6 +47,13 @@
     font-family: 'Crimson Text', serif;
     font-size: 14px;
     margin-bottom: 20px;
+}
+.item-set-text-categor{
+    text-decoration: none;
+    color: #232323;
+}
+.item-set-text-categor:hover {
+    text-decoration: underline;
 }
 .item-btn {
     display: block;

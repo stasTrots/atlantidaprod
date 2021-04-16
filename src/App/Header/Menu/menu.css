@@ -40,6 +40,10 @@
     color: #232323;
     
 }
+.list-style:active {
+    background-color: #fff;
+    color: #232323;
+}
 .display-none {
     display: none;
 }
@@ -97,6 +101,7 @@
     width: 250px;
     left: 0;
     top: 183px;
+    z-index: 10;
     background-color: transparent;
     transform: translateY(-1000px);
     transition: all .7s ease;
@@ -113,6 +118,7 @@
     width: 250px;
     right: 0;
     top: 183px;
+    z-index: 10;
     background-color: transparent;
     transform: translateY(-1000px);
     transition: all .7s ease;
