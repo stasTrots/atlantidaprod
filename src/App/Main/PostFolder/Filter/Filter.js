@@ -3,7 +3,7 @@ import './filter.css'
 
 const Filter = () => {
     return (
-        <div >
+        <div className="col-xs-4 filter-list mobile-menu-none">
                     <div className="filter-search" >
                         <img src="image/lupa.png" alt="" />
                         <input type="text" placeholder="Search" />

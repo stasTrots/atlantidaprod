@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 const BurgerMenu = ({
@@ -15,15 +16,15 @@ const BurgerMenu = ({
     return (
             <div>
                 <nav className={activeMenu} >
-                    <a href="/" className="list-style">home</a>
-                    <a href="/" className="list-style">about</a>
-                    <a href="/" className="list-style">services</a>
-                    <a href="/" className="list-style">history</a>
-                    <a href="/" className="list-style">team</a>
-                    <a href="/" className="list-style">portfolio</a>
-                    <a href="/" className="list-style">prices</a>
-                    <a href="/" className="list-style">blog</a>
-                    <a href="/" className="list-style">contact</a>
+                    <Link to="/" className="list-style">home</Link>
+                    <Link to="/" className="list-style">about</Link>
+                    <Link to="/" className="list-style">services</Link>
+                    <Link to="/" className="list-style">history</Link>
+                    <Link to="/" className="list-style">team</Link>
+                    <Link to="/" className="list-style">portfolio</Link>
+                    <Link to="/" className="list-style">prices</Link>
+                    <Link to="/postlist" className="list-style">blog</Link>
+                    <Link to="/" className="list-style">contact</Link>
                     <div className="mereji">
                         <img src="image/icon_foot_1.png" alt="" className="meregi-img" />
                         <img src="image/icon_foot_2.png" alt="" className="meregi-img" />
@@ -32,15 +33,15 @@ const BurgerMenu = ({
                     
                     </nav>  
                     <nav className={activeMenu2} >
-                    <a href="/" className="list-style">home</a>
-                    <a href="/" className="list-style">about</a>
-                    <a href="/" className="list-style">services</a>
-                    <a href="/" className="list-style">history</a>
-                    <a href="/" className="list-style">team</a>
-                    <a href="/" className="list-style">portfolio</a>
-                    <a href="/" className="list-style">prices</a>
-                    <a href="/" className="list-style">blog</a>
-                    <a href="/" className="list-style">contact</a>
+                    <Link to="/" className="list-style">home</Link>
+                    <Link to="/" className="list-style">about</Link>
+                    <Link to="/" className="list-style">services</Link>
+                    <Link to="/" className="list-style">history</Link>
+                    <Link to="/" className="list-style">team</Link>
+                    <Link to="/" className="list-style">portfolio</Link>
+                    <Link to="/" className="list-style">prices</Link>
+                    <Link to="/postlist" className="list-style">blog</Link>
+                    <Link to="/" className="list-style">contact</Link>
                     <div className="mereji">
                         <img src="image/icon_foot_1.png" alt="" className="meregi-img" />
                         <img src="image/icon_foot_2.png" alt="" className="meregi-img" />

@@ -33,7 +33,7 @@ class FilterMobile extends Component {
         }
         
         return (
-            <div >
+            <div className="col-sm-12 display-none filter-mobile">
                         <div className="filter-mobile display-none">
                             <div className="filter-search" >
                                 <img src="image/lupa.png" alt="" />

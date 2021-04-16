@@ -1,8 +1,8 @@
 import React from 'react'
-import FilterMobile from './Filter/FilterMobile'
-import Filter from './Filter/Filter'
-import PostList from './Posts/PostList'
-
+import { Route, Switch} from 'react-router-dom'
+import HomePage from './HomePage/HomePage'
+import BlogPost from './PostFolder/BlogPost'
+import ReadMorePage from '../Component/ReadMore/ReadMorePage'
 
 const Main = ({
     openFilter,
@@ -10,23 +10,19 @@ const Main = ({
 }) => {
     return (
         <main className="main">
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm-12">
-                        <FilterMobile 
+            <Switch>
+                <Route path="/" exact component={HomePage} />
+                
+                <Route path="/postlist" exact 
+                        render={() => <BlogPost
                         openFilter={openFilter}
-                        filterState={filterState}/>
-                    </div>
-                    <div className="col-xs-8 col-sm-12">
-                        <PostList />
-                    </div>
-                    <div className="col-xs-4 filter-list mobile-menu-none">
-                        <Filter />
-                    </div>
-                    
-                    
-                </div>
-            </div>
+                        filterState={filterState} /> }/>
+                <Route path="/postlist/postpage" exact render={() => <ReadMorePage
+                        openFilter={openFilter}
+                        filterState={filterState} /> } />        
+                            
+                            
+            </Switch>
         </main>
     )
 }

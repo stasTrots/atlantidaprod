@@ -40,6 +40,7 @@
     margin-bottom: 20px;
 }
 .item-btn {
+    display: block;
     border-left: 2px solid black;
     border-top: 1px solid black;
     border-right: none;
@@ -67,10 +68,10 @@
     margin-top: 50px;
     transition: all .3s linear;
 }
-.blog-item:hover {
+/* .blog-item:hover {
     background-color: #464646;
     color: white;
-}
+} */
 .blog-list::after {
     content: "";
     display: block;

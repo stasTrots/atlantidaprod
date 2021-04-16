@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './post.css'
+import { Link } from 'react-router-dom'
 
 
 class PostListItem extends Component {
@@ -22,7 +23,7 @@ class PostListItem extends Component {
                     <img src={images} alt="" />
                 </div>
                 <div className="item-name">
-                    <h3>{title}</h3>
+                    <h3><a href="/">{title}</a></h3>
                     <i>By {author} / {data}</i>
                 </div>
                 <div className="item-set">
@@ -36,13 +37,13 @@ class PostListItem extends Component {
                     </div>
                     <div className="categ">
                         <img src="image/categ.png" alt="" className="item-set-img" />
-                        <p className="item-set-text">{categor}</p>
+                        <a href="/" className="item-set-text">{categor}</a>
                     </div>
                 </div>
                 <div className="item-text">
                     <p>{textAbout}</p>
                 </div>
-                <button className="item-btn">Read More</button>
+                <Link to="/postlist/postpage"><button className="item-btn">Read More</button></Link>
                 </div>
         )
     }
