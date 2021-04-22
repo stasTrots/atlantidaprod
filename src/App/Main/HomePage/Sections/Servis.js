@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
 
 const Servis = () => {
+    useEffect (() => {
+        Aos.init({
+            duration:2500,
+            easing:"esse-in-cubic",
+            anchorPlacement:'top-bottom'
+        })
+    })
     return (
-        <section className="services">
+        <section className="services" data-aos="fade">
         <div className="container container-servis">
             <div className="row">
                 <div className="col-xs-12">
@@ -16,7 +24,7 @@ const Servis = () => {
                         <div className="col-xs-3 col-sm-12 col-md-5">
                             <div className="servis-item">
                                     <div className="servis-item-img">
-                                        <img src="image/idea.png" alt=""/>
+                                        <img src="/image/idea.png" alt=""/>
                                     </div>
                                     <h3>graphic<br/>
                                         design
@@ -33,7 +41,7 @@ const Servis = () => {
                         <div className="col-xs-3 col-sm-12 col-md-5">
                             <div className="servis-item">
                                     <div className="servis-item-img">
-                                        <img src="image/se2.png" alt=""/>
+                                        <img src="/image/se2.png" alt=""/>
                                     </div>
                                     <h3>website<br/>
                                         design
@@ -50,7 +58,7 @@ const Servis = () => {
                         <div className="col-xs-3 col-sm-12 col-md-5">
                             <div className="servis-item">
                                     <div className="servis-item-img">
-                                        <img src="image/se3.png" alt=""/>
+                                        <img src="/image/se3.png" alt=""/>
                                     </div>
                                     <h3>seo &<br/>
                                         analitycs
@@ -67,7 +75,7 @@ const Servis = () => {
                         <div className="col-xs-3 col-sm-12 col-md-5">
                             <div className="servis-item">
                                     <div className="servis-item-img">
-                                        <img src="image/se4.png" alt=""/>
+                                        <img src="/image/se4.png" alt=""/>
                                     </div>
                                     <h3>wordpress<br/>
                                         programing

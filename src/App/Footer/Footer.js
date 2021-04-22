@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="col-xs-4 col-sm-12 col-md-12">
                         <div className="footer-info">
                             <div className="footer-logo">
-                                <img src="image/logo.png" alt="" />
+                                <img src="/image/logo.png" alt="" />
                                 <h2 className="logo-text">atlantida</h2>
                             </div>
                             <div className="footer-text">
@@ -23,9 +23,9 @@ const Footer = () => {
                                 <h3>e-mail: elegantflyers@gmail.com</h3>
                                 <h3>+380954915573</h3>
                                 <div className="mereji">
-                                    <img src="image/icon_foot_1.png" alt="" className="meregi-img" />
-                                    <img src="image/icon_foot_2.png" alt="" className="meregi-img" />
-                                    <img src="image/icon_foot_4.png" alt="" className="meregi-img" />
+                                    <img src="/image/icon_foot_1.png" alt="" className="meregi-img" />
+                                    <img src="/image/icon_foot_2.png" alt="" className="meregi-img" />
+                                    <img src="/image/icon_foot_4.png" alt="" className="meregi-img" />
                                 </div>
                             </div>
                         </div>

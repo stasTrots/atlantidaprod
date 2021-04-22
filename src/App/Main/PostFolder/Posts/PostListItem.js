@@ -7,7 +7,7 @@ class PostListItem extends Component {
     render () {
 
         const {
-            
+            id,
             title,
             images,
             author,
@@ -23,27 +23,28 @@ class PostListItem extends Component {
                     <img src={images} alt="" />
                 </div>
                 <div className="item-name">
-                    <h3><a href="/">{title}</a></h3>
+                    <h3><Link to={`/postlist/postpage/${id}`}>{title}</Link></h3>
                     <i>By {author} / {data}</i>
                 </div>
                 <div className="item-set">
                     <div className="comm">
-                        <img src="image/kom.png" alt="" className="item-set-img" />
+                        <img src="/image/kom.png" alt="" className="item-set-img" />
                         <p className="item-set-text">{komments}</p>
                     </div>
                     <div className="search">
-                        <img src="image/search.png" alt="" className="item-set-img" />
+                        <img src="/image/search.png" alt="" className="item-set-img" />
                         <p className="item-set-text">{search}</p>
                     </div>
                     <div className="categ">
-                        <img src="image/categ.png" alt="" className="item-set-img" />
-                        <a href="/" className="item-set-text item-set-text-categor">{categor}</a>
+                        <img src="/image/categ.png" alt="" className="item-set-img" />
+                        <Link to={`/categor/${categor}`}  className="item-set-text item-set-text-categor">{categor}</Link>
                     </div>
                 </div>
                 <div className="item-text">
                     <p>{textAbout}</p>
                 </div>
-                <Link to="/postlist/postpage"><button className="item-btn">Read More</button></Link>
+                <div key={id}></div>
+                <Link to={`/postlist/postpage/${id}`}><button className="item-btn">Read More</button></Link>
                 </div>
         )
     }

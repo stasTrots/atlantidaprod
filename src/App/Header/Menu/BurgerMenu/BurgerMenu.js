@@ -26,9 +26,9 @@ const BurgerMenu = ({
                     <NavLink to="/postlist" exact className="list-style">blog</NavLink>
                     <Link to="/" className="list-style">contact</Link>
                     <div className="mereji">
-                        <img src="image/icon_foot_1.png" alt="" className="meregi-img" />
-                        <img src="image/icon_foot_2.png" alt="" className="meregi-img" />
-                        <img src="image/icon_foot_4.png" alt="" className="meregi-img" />
+                        <img src="/image/icon_foot_1.png" alt="" className="meregi-img" />
+                        <img src="/image/icon_foot_2.png" alt="" className="meregi-img" />
+                        <img src="/image/icon_foot_4.png" alt="" className="meregi-img" />
                     </div>
                     
                     </nav>  
@@ -43,9 +43,9 @@ const BurgerMenu = ({
                     <Link to="/postlist" className="list-style">blog</Link>
                     <Link to="/" className="list-style">contact</Link>
                     <div className="mereji">
-                        <img src="image/icon_foot_1.png" alt="" className="meregi-img" />
-                        <img src="image/icon_foot_2.png" alt="" className="meregi-img" />
-                        <img src="image/icon_foot_4.png" alt="" className="meregi-img" />
+                        <img src="/image/icon_foot_1.png" alt="" className="meregi-img" />
+                        <img src="/image/icon_foot_2.png" alt="" className="meregi-img" />
+                        <img src="/image/icon_foot_4.png" alt="" className="meregi-img" />
                     </div>
                 </nav>  
                 <div className={menuBack}></div> 

@@ -3,23 +3,26 @@ import './homePage.css'
 import AboutUs from './Sections/AboutUs'
 import BlogMain from './Sections/BlogMain'
 import Clients from './Sections/Clients'
-import OurTeam from './Sections/OutTeam'
+import OutTeam from './Sections/OutTeam'
 import Prices from './Sections/Prices'
 import Servis from './Sections/Servis'
 import History from './Sections/History'
-import Rtl from '../../Component/Slider/SliderFoot'
-// import SliderPromo from '../../Component/Slider/SliderPromo'
+import Rtl from '../../../Components/Slider/SliderFoot'
+
+import "aos/dist/aos.css"
+
 const HomePage = () => {
+    
     return (
         <>
-            <AboutUs/>
-            <Servis/>
-            <History/>
-            <OurTeam/>
-            <BlogMain/>
-            <Prices/>
-            <Clients/>
-            <Rtl/>
+            <AboutUs />
+            <Servis />
+            <History />
+            <OutTeam />
+            <BlogMain />
+            <Prices />
+            <Clients />
+            <Rtl />
         </>
     )
 }

@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
 
 const BlogMain = () => {
+    useEffect (() => {
+        Aos.init({
+            duration:2500,
+            easing:"esse-in-cubic",
+            anchorPlacement:'top-bottom'
+        })
+    })
     return (
-        <section className="blog-main">
+        <section className="blog-main" data-aos="fade">
         <div className="container container-blog">
             <div className="row row-history">
                 <div className="col-xs-12">
@@ -18,7 +26,7 @@ const BlogMain = () => {
                         <div className="col-xs-6 col-sm-12">
                             <div className="blog-main-item">
                                 <div className="blog-main-item-img">
-                                    <img src="image/blog/b1.png" alt=""/>
+                                    <img src="/image/blog/b1.png" alt=""/>
                                 </div>
                                 <div className="blog-main-item-text">
                                     <i>14 Aug 2015 / By Admin</i>
@@ -28,7 +36,7 @@ const BlogMain = () => {
                             </div>
                             <div className="blog-main-item">
                                 <div className="blog-main-item-img">
-                                    <img src="image/blog/b2.png" alt=""/>
+                                    <img src="/image/blog/b2.png" alt=""/>
                                 </div>
                                 <div className="blog-main-item-text">
                                     <i>14 Aug 2015 / By Admin</i>
@@ -40,7 +48,7 @@ const BlogMain = () => {
                         <div className="col-xs-6 col-sm-12">
                             <div className="blog-main-item">
                                 <div className="blog-main-item-img">
-                                    <img src="image/blog/b3.png" alt=""/>
+                                    <img src="/image/blog/b3.png" alt=""/>
                                 </div>
                                 <div className="blog-main-item-text">
                                     <i>14 Aug 2015 / By Admin</i>
@@ -50,7 +58,7 @@ const BlogMain = () => {
                             </div>
                             <div className="blog-main-item">
                                 <div className="blog-main-item-img">
-                                    <img src="image/blog/b4.png" alt=""/>
+                                    <img src="/image/blog/b4.png" alt=""/>
                                 </div>
                                 <div className="blog-main-item-text">
                                     <i>14 Aug 2015 / By Admin</i>

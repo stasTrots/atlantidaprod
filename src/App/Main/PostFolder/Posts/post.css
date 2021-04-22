@@ -83,11 +83,11 @@
     padding: 25px;
     margin-top: 50px;
     transition: all .3s linear;
+    
 }
-/* .blog-item:hover {
-    background-color: #464646;
-    color: white;
-} */
+.blog-item:hover {
+    box-shadow: 15px 15px 3px 3px rgba(0, 0, 0, 0.7);
+}
 .blog-list::after {
     content: "";
     display: block;
@@ -115,4 +115,12 @@
     width: 100%;
     margin: 50px auto;
     justify-content: center;
+}
+
+
+.categories-page-name {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 40px;
+    font-weight: 600;
 }

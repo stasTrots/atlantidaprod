@@ -1,5 +1,5 @@
 import React from 'react'
-import SliderIntro from '../../Component/Slider/SliderIntro'
+import SliderIntro from '../../../Components/Slider/SliderIntro'
 import './headerIntro.css'
 
 const HeaderIntro = () => {

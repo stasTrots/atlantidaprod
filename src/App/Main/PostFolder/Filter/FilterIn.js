@@ -1,4 +1,7 @@
 import React from 'react'
+import {categories, archivesObj} from './FilterObj'
+import { Link } from 'react-router-dom'
+
 
 const Categories = ({
     openCategories,
@@ -10,14 +13,18 @@ const Categories = ({
     }
     return (
             <li className={filCategor} onClick={openCategories}>categories +
-                                        <ul className="categories">
-                                        <li><a href="/" className="list-cat">Photography</a></li>
-                                        <li><a href="/" className="list-cat">Website Design</a></li>
-                                        <li><a href="/" className="list-cat">Branding</a></li>
-                                        <li><a href="/" className="list-cat">Flyers</a></li>
-                                        <li><a href="/" className="list-cat">Uncategories</a></li>
-                                        <li><a href="/" className="list-cat">Category 22</a></li>
-                                    </ul></li>
+                <ul className="categories">
+                {
+                    categories.map(({
+                        idCateg,
+                        categorName    
+                    }) => (
+                            
+                            <li key={idCateg}><Link to={`/categor/${categorName}`} className="list-cat">{categorName}</Link></li>
+                        ))
+                }
+                </ul>
+            </li>
     )
 }
 
@@ -31,14 +38,17 @@ const Archives = ({
     }
     return (
         <li className={filArch} onClick={openArch}>acrchives +
-                                        <ul className="archives" >
-                                            <li><a href="/" className="list-cat">January 2020</a></li>
-                                            <li><a href="/" className="list-cat">December 2020</a></li>
-                                            <li><a href="/" className="list-cat">November 2020</a></li>
-                                            <li><a href="/" className="list-cat">October 2020</a></li>
-                                            <li><a href="/" className="list-cat">September 2020</a></li>
-                                        </ul>
-                                    </li>
+            <ul className="archives" >
+                {
+                    archivesObj.map(({
+                        idArch,
+                        archName
+                    }) => (
+                        <li key={idArch}><Link to={`/categor/${archName}`} className="list-cat">{archName}</Link></li>
+                    ))
+                }
+            </ul>
+        </li>
     )
 }
 

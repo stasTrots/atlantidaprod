@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
 
 const Prices = () => {
+    useEffect (() => {
+        Aos.init({
+            duration:2500,
+            easing:"esse-in-cubic",
+            anchorPlacement:'top-bottom'
+        })
+    })
     return (
-        <section className="prices">
+        <section className="prices" data-aos="fade">
         <div className="container container-servis">
             <div className="row">
                 <div className="col-xs-12">
@@ -19,7 +27,7 @@ const Prices = () => {
                                     <h3>basic</h3>
                                 </div>
                                 <div className="pr-it-img">
-                                    <img src="image/pr1.png" alt=""/>
+                                    <img src="/image/pr1.png" alt=""/>
                                 </div>
                                 <div className="pr-it-pr">
                                     <p>10</p>
@@ -42,7 +50,7 @@ const Prices = () => {
                                     <h3>advanced</h3>
                                 </div>
                                 <div className="pr-it-img">
-                                    <img src="image/pr2.png" alt=""/>
+                                    <img src="/image/pr2.png" alt=""/>
                                 </div>
                                 <div className="pr-it-pr">
                                     <p>20</p>
@@ -65,7 +73,7 @@ const Prices = () => {
                                     <h3>pro</h3>
                                 </div>
                                 <div className="pr-it-img">
-                                    <img src="image/pr3.png" alt=""/>
+                                    <img src="/image/pr3.png" alt=""/>
                                 </div>
                                 <div className="pr-it-pr">
                                     <p>30</p>

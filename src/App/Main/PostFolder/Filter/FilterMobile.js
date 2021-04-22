@@ -7,7 +7,8 @@ import {Categories, Archives} from './FilterIn'
 class FilterMobile extends Component {
     state = {
         categoriesOpen:false,
-        archOpen:false
+        archOpen:false,
+        
     }
     
     openCategories = () => {
@@ -36,7 +37,7 @@ class FilterMobile extends Component {
             <div className="col-sm-12 display-none filter-mobile">
                         <div className="filter-mobile display-none">
                             <div className="filter-search" >
-                                <img src="image/lupa.png" alt="" />
+                                <img src="/image/lupa.png" alt="" />
                                 <input type="text" placeholder="Search" />
                                 
                             </div>

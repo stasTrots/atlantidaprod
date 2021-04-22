@@ -3,6 +3,9 @@ import FilterMobile from './Filter/FilterMobile'
 import Filter from './Filter/Filter'
 import PostList from './Posts/PostList'
 import PostPage from './ReadMore/ReadMore'
+import CategoryPageList from './CategoryPage/CategoryPageList'
+
+
 
 
 const BlogPost = ({
@@ -26,8 +29,10 @@ const BlogPost = ({
 
 const ReadMorePage = ({
     openFilter,
-    filterState
+    filterState,
+    match
 }) => {
+
     return (
         <div className="container">
                 <div className="row">
@@ -35,7 +40,8 @@ const ReadMorePage = ({
                         openFilter={openFilter}
                         filterState={filterState}/>
                     <div className="col-xs-8 col-sm-12">
-                        <PostPage /> 
+                        <PostPage 
+                        match={match}/> 
                     </div>
                         <Filter />
                 </div>
@@ -43,4 +49,27 @@ const ReadMorePage = ({
     )
 }
 
-export  {ReadMorePage, BlogPost}
+const CategoryPage = ({
+    openFilter,
+    filterState,
+    match
+}) => {
+    
+    return (
+        <div className="container">
+                <div className="row">
+                        <FilterMobile 
+                        openFilter={openFilter}
+                        filterState={filterState}/>
+                    <div className="col-xs-8 col-sm-12">
+                        <CategoryPageList 
+                        match={match}
+                        />
+                    </div>
+                        <Filter />
+                </div>
+        </div>
+    )
+}
+
+export  {ReadMorePage, BlogPost, CategoryPage}

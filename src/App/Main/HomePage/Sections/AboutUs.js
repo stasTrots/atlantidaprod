@@ -1,13 +1,15 @@
 import React from 'react'
 
+
 const AboutUs = () => {
+    
     return (
-        <section className="about-us">
+        <section className="about-us" >
             <div className="container">
                 <div className="row">
                     <div className="col-xs-12">
                         <div className="about-us-img mobile-menu-none">
-                            <img src="image/aut.png" alt=""/>
+                            <img src="/image/aut.png" alt=""/>
                         </div>
                         <div className="about-us-main">
                             <div className="section-header">
@@ -44,25 +46,25 @@ const AboutUs = () => {
                             </div>
                             <div className="about-us-inf">
                                 <div className="inf-item">
-                                    <img src="image/au1.png" alt=""/>
+                                    <img src="/image/au1.png" alt=""/>
                                     <p>awards</p>
                                     <p>winner</p>
                                     <h1>54</h1>
                                 </div>
                                 <div className="inf-item">
-                                    <img src="image/au2.png" alt=""/>
+                                    <img src="/image/au2.png" alt=""/>
                                     <p>jobs</p>
                                     <p>done</p>
                                     <h1>1054</h1>
                                 </div>
                                 <div className="inf-item">
-                                    <img src="image/au3.png" alt=""/>
+                                    <img src="/image/au3.png" alt=""/>
                                     <p>happy</p>
                                     <p>clients</p>
                                     <h1>120</h1>
                                 </div>
                                 <div className="inf-item">
-                                    <img src="image/au4.png" alt=""/>
+                                    <img src="/image/au4.png" alt=""/>
                                     <p>reviews</p>
                                     <p>recieved</p>
                                     <h1>54</h1>

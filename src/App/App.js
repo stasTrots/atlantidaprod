@@ -12,7 +12,23 @@ class App extends Component {
 
   state={
     sideDrawerOpen:false,
-    filterMenuOpen:false
+    filterMenuOpen:false,
+
+  }      
+scrollToTop = () => {
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  })
+}
+
+
+pageClickBtn = () => {
+  this.setState((pervState) => ({
+    
+    pageBth:pervState.slice2 + 5,
+  }))
+  
 }
 openClickMenu = () => {
     this.setState((pervState) => ({
@@ -30,8 +46,10 @@ closeClickBtn = () => {
     filterMenuOpen:false
   })
 }
-  render() {
 
+
+  render() {
+    
   
     return (
       <>
@@ -40,7 +58,8 @@ closeClickBtn = () => {
         show={this.state.sideDrawerOpen}/>
         <Main 
         openFilter={this.openFilter}
-        filterState={this.state.filterMenuOpen}/>
+        filterState={this.state.filterMenuOpen}
+        scrollToTop={this.scrollToTop}/>
         <Footer/>
         <BackBody />
         <CloseBtn 

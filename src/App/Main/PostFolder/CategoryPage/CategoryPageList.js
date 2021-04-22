@@ -1,14 +1,19 @@
 import React from 'react'
-import PostListItem from './PostListItem'
-import posts from './Post'
+import posts from '../Posts/Post'
+import PostListItem from '../Posts/PostListItem'
 
-const PostList = () => {
+
+
+const CategoryPageList = ({
+    match,
+}) => {
+    
     return (
         <>
             <div >
-                    
+                    <h1 className={"categories-page-name"}>{match.params.id}</h1>
                         {
-                            posts.slice(0,5).map(({
+                            posts.filter(categories => (categories.categor === match.params.id || categories.data === match.params.id) ).map(({
                                 id,
                                 title,
                                 images,
@@ -17,7 +22,8 @@ const PostList = () => {
                                 komments,
                                 search,
                                 categor,
-                                textAbout
+                                textAbout,
+                                
                             }) => (
                                 <div className="blog-list" id="blog-list" key={id}>
                                     <PostListItem
@@ -46,4 +52,4 @@ const PostList = () => {
     )
 }
 
-export default PostList
+export default CategoryPageList

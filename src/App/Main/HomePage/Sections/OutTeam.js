@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
 
-const OurTeam = () => {
+const OutTeam = () => {
+    useEffect (() => {
+        Aos.init({
+            duration:2500,
+            easing:"esse-in-cubic",
+            anchorPlacement:'top-bottom'
+        })
+    })
     return (
-        <section className="our-team">
+        <section className="our-team" data-aos="fade">
         <div className="container container-servis">
             <div className="row row-history">
                 <div className="col-xs-12">
@@ -16,44 +24,44 @@ const OurTeam = () => {
                 <div className="col-xs-12">
                     <div className="team-list">
                         <div className="team-item">
-                            <img src="image/ot1.png" alt=""/>
+                            <img src="/image/ot1.png" alt=""/>
                             <div className="ot-hover">
                                 <div className="ot-text">
                                     <h3>Jilia Smith</h3>
                                     <i>Designer</i>
                                 </div>
                                 <div className="ot-merej">
-                                    <img src="image/mereg-post-1.png" alt=""/>
-                                    <img src="image/mereg-post3.png" alt=""/>
-                                    <img src="image/mereg-post4.png" alt=""/>
+                                    <img src="/image/mereg-post-1.png" alt=""/>
+                                    <img src="/image/mereg-post3.png" alt=""/>
+                                    <img src="/image/mereg-post4.png" alt=""/>
                                 </div>
                             </div>
                         </div>
                         <div className="team-item">
-                            <img src="image/ot2.png" alt=""/>
+                            <img src="/image/ot2.png" alt=""/>
                             <div className="ot-hover">
                                 <div className="ot-text">
                                     <h3>Jilia Smith</h3>
                                     <i>Designer</i>
                                 </div>
                                 <div className="ot-merej">
-                                    <img src="image/mereg-post-1.png" alt=""/>
-                                    <img src="image/mereg-post3.png" alt=""/>
-                                    <img src="image/mereg-post4.png" alt=""/>
+                                    <img src="/image/mereg-post-1.png" alt=""/>
+                                    <img src="/image/mereg-post3.png" alt=""/>
+                                    <img src="/image/mereg-post4.png" alt=""/>
                                 </div>
                             </div>
                         </div>
                         <div className="team-item">
-                            <img src="image/ot3.png" alt=""/>
+                            <img src="/image/ot3.png" alt=""/>
                             <div className="ot-hover">
                                 <div className="ot-text">
                                     <h3>Jilia Smith</h3>
                                     <i>Designer</i>
                                 </div>
                                 <div className="ot-merej">
-                                    <img src="image/mereg-post-1.png" alt=""/>
-                                    <img src="image/mereg-post3.png" alt=""/>
-                                    <img src="image/mereg-post4.png" alt=""/>
+                                    <img src="/image/mereg-post-1.png" alt=""/>
+                                    <img src="/image/mereg-post3.png" alt=""/>
+                                    <img src="/image/mereg-post4.png" alt=""/>
                                 </div>
                             </div>
                         </div>
@@ -65,4 +73,4 @@ const OurTeam = () => {
     )
 }
 
-export default OurTeam
+export default OutTeam

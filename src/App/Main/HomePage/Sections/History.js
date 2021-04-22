@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
 
 const History = () => {
+    useEffect (() => {
+        Aos.init({
+            duration:2500,
+            easing:"esse-in-cubic",
+            anchorPlacement:'top-bottom'
+        })
+    })
     return (
-        <section className="history">
+        <section className="history" data-aos="fade">
         <div className="container">
             <div className="row row-history">
                 <div className="col-xs-12">
@@ -80,7 +88,7 @@ const History = () => {
                 <div className="col-xs-12">
                     <div className="derevo-end">
                         <div className="konec">
-                            <img src="image/idea.png" alt=""/>
+                            <img src="/image/idea.png" alt=""/>
                         </div>
                     </div>
                 </div>
