@@ -23,10 +23,10 @@ const Main = ({
                         classNames="fade">
                         <Switch>
                             <Route exact path="/"  component={HomePage}/>    
-                            <Route path="/postlist"  component={BlogPost}/>
-                            <Route path="/postlist/postpage/:id"  component={ReadMorePage}/>   
-                            <Route path="/categor/:id"    component={CategoryPage}/>
-                            <Route path="/likepage"  component={LikeProdPage}/>    
+                            <Route exact path="/postlist"  component={BlogPost}/>
+                            <Route exact path="/postlist/postpage/:id"  component={ReadMorePage}/>   
+                            <Route exact path="/categor/:id"    component={CategoryPage}/>
+                            <Route exact path="/likepage"  component={LikeProdPage}/>    
                         </Switch>        
                     </CSSTransition>   
                 </TransitionGroup>
