@@ -38,6 +38,11 @@
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 20px;
+    
+}
+.lat-post-text > h3 > a {
+    text-decoration: none;
+    color: black;
 }
 .lat-post-text > p {
     font-size: 14px;

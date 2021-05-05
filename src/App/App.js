@@ -12,63 +12,64 @@ class App extends Component {
 
   state={
     sideDrawerOpen:false,
-    filterMenuOpen:false,
-
+    openScroll:false
   }      
 scrollToTop = () => {
   window.scrollTo({
     top:0,
     behavior:'smooth'
   })
-}
-
-
-pageClickBtn = () => {
-  this.setState((pervState) => ({
-    
-    pageBth:pervState.slice2 + 5,
-  }))
-  
+  this.setState({
+    openScroll:false
+  })
 }
 openClickMenu = () => {
     this.setState((pervState) => ({
         sideDrawerOpen:!pervState.sideDrawerOpen
     }))
 }
-openFilter = () => {
-  this.setState((pervState) => ({
-    filterMenuOpen:!pervState.filterMenuOpen
-  }))
-}
+
 closeClickBtn = () => {
   this.setState({
     sideDrawerOpen:false,
-    filterMenuOpen:false
   })
 }
-
+componentDidMount() {
+  window.addEventListener('scroll', this.handleScroll)
+}
+handleScroll = () => {
+  if((window.pageYOffset > document.body.scrollHeight / 4)) {
+    this.setState({
+      openScroll:true
+    }) 
+    
+  } else {
+    this.setState({
+      openScroll:false
+    })
+  }
+}
 
   render() {
     
   
     return (
-      <>
+      <div onScroll={this.handleScroll}>
         <Header
         openClickMenu={this.openClickMenu}
         show={this.state.sideDrawerOpen}/>
         <Main 
-        openFilter={this.openFilter}
-        filterState={this.state.filterMenuOpen}
-        scrollToTop={this.scrollToTop}/>
+        scrollToTop={this.scrollToTop}
+        openScroll={this.state.openScroll}/>
         <Footer/>
         <BackBody />
         <CloseBtn 
         show={this.state.sideDrawerOpen}
-        filterState={this.state.filterMenuOpen}
         close={this.closeClickBtn}/>
-      </>
+      </div>
     )
   }
+  
 }
 
 export default App;

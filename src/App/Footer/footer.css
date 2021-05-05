@@ -105,7 +105,31 @@
     background-color: #232323;
     padding: 15px 0px;
 }
-
+.after-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    font-size: 31px;
+    color: white;
+    text-align: center;
+    margin: 0px auto;
+    width: 100%;
+}
+.after-form > button {
+    width: 135px;
+    height: 40px;
+    background-color: #232323;
+    color: white;
+    margin: 15px 0px;
+    border: 1px solid #464646;
+    transition: all .3s linear;
+}
+.after-form > button:hover {
+    background-color: black;
+    
+}
 @media(max-width: 767px) {
     .form-cont {
         
@@ -129,6 +153,9 @@
     }
     .footer-container {
         padding: 25px;
+    }
+    .after-form  {
+        height: 550px;
     }
 }
 @media(max-width: 992px) {

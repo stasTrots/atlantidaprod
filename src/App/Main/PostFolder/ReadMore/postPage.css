@@ -34,6 +34,7 @@
 .comm, .search, .categ {
     display: flex;
     align-items: center;
+    margin: 10px;
 }
 .post-set-img {
     width: 20px;
@@ -191,4 +192,9 @@
 }
 .leave-comm {
     padding: 25px 0px;
+}
+@media (max-width: 767px) {
+    .post-set {
+        flex-direction: column;
+    }
 }

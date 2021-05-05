@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.css'
+import FooterForm from './FooterForm/FooterForm'
 
 const Footer = () => {
     return (
@@ -31,14 +32,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-xs-8 col-sm-12 col-md-12">
-                        <form action="" className="form-cont">
-                            <input type="text"  placeholder="Name*" />
-                            <input type="text"  placeholder="E-mail*" />
-                            <input type="text"  placeholder="Telephone*" />
-                            <input type="text"  placeholder="Website" />
-                            <textarea  placeholder="Message*"></textarea>
-                            <button>Submit</button>
-                        </form>
+                        <FooterForm/>
                     </div>
                 </div>
             </div>

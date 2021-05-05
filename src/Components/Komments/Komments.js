@@ -14,7 +14,7 @@ const Komments = () => {
     const [newKomments,setNewKomments] = useState({
         name:"",
         eMail:"",
-        message:""
+        message:"",
         
     })
     const handleNameChange = (e) => (
@@ -40,7 +40,8 @@ const Komments = () => {
         setNewKomments({
             name:"",
             eMail:"",
-            message:""
+            message:"",
+             
         })
         setKomments(value => {
             return [...value,newKomments]
@@ -55,14 +56,14 @@ const Komments = () => {
                     <div className="comm-list">
                         {
                             komments.map((item) => (
-                                <div className="comm-item" key={item.id}>
+                                <div className="comm-item" key={item.name}>
                                     <div className="comm-img">
                                         <img src="/image/komments.png" alt=""/>
                                     </div>
                                     <div className="comm-about">
                                         <div className="comm-name">
                                             <h3>{item.name}</h3>
-                                            <i>{item.date}</i>
+                                            <i>{new Date().toLocaleDateString()}</i>
                                         </div>
                                         <div className="comm-inf">
                                             <p>{item.message}</p>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Aos from 'aos'
+import {Link } from 'react-router-dom'
 
 const BlogMain = () => {
     useEffect (() => {
@@ -69,7 +70,7 @@ const BlogMain = () => {
                         </div>
                     </div>
                     <div className="mobile-btn-blog">
-                        <button>See More</button>
+                        <Link to="/postlist" ><button>See More</button></Link>
                     </div>
                 </div>   
             </div>

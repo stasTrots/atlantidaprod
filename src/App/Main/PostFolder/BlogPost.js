@@ -4,20 +4,15 @@ import Filter from './Filter/Filter'
 import PostList from './Posts/PostList'
 import PostPage from './ReadMore/ReadMore'
 import CategoryPageList from './CategoryPage/CategoryPageList'
+import LikePage from './LikePage/LikePage'
 
 
 
-
-const BlogPost = ({
-    openFilter,
-    filterState
-}) => {
+const BlogPost = () => {
     return (
         <div className="container">
                 <div className="row">
-                        <FilterMobile 
-                        openFilter={openFilter}
-                        filterState={filterState}/>
+                        <FilterMobile/>
                     <div className="col-xs-8 col-sm-12">
                         <PostList /> 
                     </div>
@@ -28,17 +23,13 @@ const BlogPost = ({
 }
 
 const ReadMorePage = ({
-    openFilter,
-    filterState,
     match
 }) => {
-
+   
     return (
         <div className="container">
                 <div className="row">
-                        <FilterMobile 
-                        openFilter={openFilter}
-                        filterState={filterState}/>
+                        <FilterMobile/>
                     <div className="col-xs-8 col-sm-12">
                         <PostPage 
                         match={match}/> 
@@ -50,17 +41,13 @@ const ReadMorePage = ({
 }
 
 const CategoryPage = ({
-    openFilter,
-    filterState,
     match
 }) => {
     
     return (
         <div className="container">
                 <div className="row">
-                        <FilterMobile 
-                        openFilter={openFilter}
-                        filterState={filterState}/>
+                        <FilterMobile/>
                     <div className="col-xs-8 col-sm-12">
                         <CategoryPageList 
                         match={match}
@@ -71,5 +58,18 @@ const CategoryPage = ({
         </div>
     )
 }
+const LikeProdPage = () => {
 
-export  {ReadMorePage, BlogPost, CategoryPage}
+    return (
+        <div className="container">
+                <div className="row">
+                        <FilterMobile/>
+                    <div className="col-xs-8 col-sm-12">
+                        <LikePage/> 
+                    </div>
+                        <Filter />
+                </div>
+        </div>
+    )
+}
+export  {ReadMorePage, BlogPost, CategoryPage, LikeProdPage}

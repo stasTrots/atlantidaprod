@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './filter.css'
 import {Categories, Archives} from './FilterIn'
-
+import { connect } from 'react-redux'
 
 
 class FilterMobile extends Component {
@@ -24,12 +24,13 @@ class FilterMobile extends Component {
     
     render() {
         const {
-            openFilter,
-            filterState
+           
+            isOpen,
+            openFilMenu
         } = this.props
         let activeFilterMenu = "filter-menu-mobile"
         
-        if(filterState) {
+        if(isOpen) {
         activeFilterMenu = "filter-menu-mobile active-filter-mobile"
         }
         
@@ -42,7 +43,7 @@ class FilterMobile extends Component {
                                 
                             </div>
                             <div className="filter-btn">
-                                <button className="filter-menu" onClick={openFilter}>Filter</button>
+                                <button className="filter-menu" onClick={openFilMenu}>Filter</button>
                             </div>
                             <div className={activeFilterMenu}>
                                 <ul>
@@ -60,4 +61,15 @@ class FilterMobile extends Component {
     }
 }
 
-export default FilterMobile
+const mapState = (state) => ({
+    isOpen:state.filterState.filterMenuOpen
+})
+const mapDispatch = (dispatch) => ({
+    openFilMenu: () => dispatch({
+        type:"FILTER"
+    }),
+})
+export default connect(
+    mapState,
+    mapDispatch
+)(FilterMobile)

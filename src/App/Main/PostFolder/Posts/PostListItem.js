@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './post.css'
 import { Link } from 'react-router-dom'
-
+import {connect} from 'react-redux'
 
 class PostListItem extends Component {
     render () {
@@ -15,7 +15,11 @@ class PostListItem extends Component {
             komments,
             search,
             categor,
-            textAbout
+            textAbout,
+            isLiked ,
+            addLike,
+            removeLike,
+            removeLikeObj
         } = this.props
         return (
             <div className="blog-item">
@@ -39,15 +43,40 @@ class PostListItem extends Component {
                         <img src="/image/categ.png" alt="" className="item-set-img" />
                         <Link to={`/categor/${categor}`}  className="item-set-text item-set-text-categor">{categor}</Link>
                     </div>
+                    <div className="like-item">
+                    <button onClick={() => (isLiked) ? removeLike(id) && removeLikeObj(id) : addLike(id)} className="isLiked">
+                    {isLiked ? <span>&#9829;</span> : <span>&#9825;</span>}
+                </button>
+                    </div>
                 </div>
                 <div className="item-text">
                     <p>{textAbout}</p>
                 </div>
                 <div key={id}></div>
-                <Link to={`/postlist/postpage/${id}`}><button className="item-btn">Read More</button></Link>
+                <Link to={`/postlist/postpage/${id}`} className="item-btn-link"><button className="item-btn">Read More</button></Link>
                 </div>
         )
     }
 }
 
-export default PostListItem
+const mapState = (state,props) => ({
+    isLiked:state.productsLike[props.id]
+})
+const mapDispatch = (dispatch,{id}) => ({
+    addLike: () => dispatch({
+        type:"LIKE",
+        id
+    }),
+    removeLike: () => dispatch({
+        type:"DISLIKE",
+        id
+    }),
+    removeLikeObj:(id)=>dispatch({
+        type:"REMOVE_LIKES_POSTS",
+        id,
+    }),
+})
+export default connect(
+    mapState,
+    mapDispatch
+)(PostListItem)

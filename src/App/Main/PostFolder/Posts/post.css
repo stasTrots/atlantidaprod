@@ -34,9 +34,24 @@
     margin: 15px 0px;
     
 }
+.like-item {
+    margin: 10px;
+}
+.like-item > button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.like-item > button > span {
+    font-size: 30px;
+    color: red;
+}
 .comm, .search, .categ {
     display: flex;
     align-items: center;
+    margin: 10px;
 }
 .item-set-img {
     width: 20px;
@@ -67,6 +82,11 @@
     background-color: transparent;
     color: black;
     transition: all .4s linear;
+    text-decoration: none;
+
+}
+.item-btn-link { 
+    text-decoration: none;
 }
 .item-btn:hover {
     border-left: none;
@@ -123,4 +143,10 @@
     padding-top: 100px;
     font-size: 40px;
     font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .item-set {
+        flex-direction: column;
+    }
 }

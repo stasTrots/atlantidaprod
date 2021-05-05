@@ -2,9 +2,13 @@ import React from 'react'
 import posts, { getPostMore } from '../../App/Main/PostFolder/Posts/Post'
 import { Link } from 'react-router-dom'
 import Komments from '../Komments/Komments'
+import { connect } from 'react-redux'
+
 const PostPagesItem = ({
     match,
-    postItem = getPostMore(posts)
+    postItem = getPostMore(posts),
+    isLiked ,
+    addLike,
 }) => {
     const id = match.params.id
     return(
@@ -28,7 +32,12 @@ const PostPagesItem = ({
                             </div>
                             <div className="categ">
                                 <img src="/image/categ.png" alt="" className="post-set-img"/>
-                                <Link to={`/categor/${postItem[id].categor}`} className="post-set-text">{postItem[id].categor}</Link>
+                                <Link to={`/categor/${postItem[id].categor}`} className="post-set-text item-set-text-categor">{postItem[id].categor}</Link>
+                            </div>
+                            <div className="like-item">
+                                <button  className="isLiked">
+                                {isLiked ? <span>&#9829;</span> : <span>&#9825;</span>}
+                                </button>
                             </div>
                         </div>
                         <div className="post-text">
@@ -63,5 +72,10 @@ const PostPagesItem = ({
 
     
 
+const mapState = (state,props) => ({
+    isLiked:state.productsLike[props.match.params.id]
+})
 
-export default PostPagesItem
+export default connect(
+    mapState,
+)(PostPagesItem)

@@ -444,6 +444,26 @@
     color: white;
     background-color: #2d2d2f;
 }
+.mobile-btn-blog > a > button {
+    width: 130px;
+    height: 40px;
+    border: 1px solid white;
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+    transition: all .4s linear;
+}
+.mobile-btn-blog > a > button:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: black;
+}
+.mobile-btn-blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
 
 
 /*  PRICES  */
@@ -621,20 +641,7 @@
     .blog-main-none {
         display: none;
     }
-    .mobile-btn-blog > button {
-        width: 130px;
-        height: 40px;
-        border: 1px solid white;
-        background-color: transparent;
-        font-size: 16px;
-        color: white;
-    }
-    .mobile-btn-blog {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 30px 0px;
-    }
+    
 
     /* PRICES */
 

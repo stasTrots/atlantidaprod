@@ -1,19 +1,27 @@
 import React from 'react'
-import posts from '../Posts/Post'
+import posts, {getPostMore} from '../Posts/Post'
 import PostListItem from '../Posts/PostListItem'
+import { connect } from 'react-redux'
 
 
-
-const CategoryPageList = ({
-    match,
+const LikePage = ({
+   isLiked,
+   postId = getPostMore(posts),
+   id
 }) => {
-    
+    const listOfLikePosts = Object.keys(isLiked).map(likeId => (
+        postId[likeId]
+     ))
     return (
         <>
             <div >
-                    <h1 className={"categories-page-name"}>{match.params.id}</h1>
+                    <h1 className={"categories-page-name"}>I Like It: {
+                            Object.keys(isLiked).reduce((accObj, id)=>(
+                                accObj + isLiked[id]
+                            ),0 )
+                        }</h1>
                         {
-                            posts.filter(categories => (categories.categor === match.params.id || categories.data === match.params.id) ).map(({
+                            listOfLikePosts.map(({
                                 id,
                                 title,
                                 images,
@@ -41,10 +49,23 @@ const CategoryPageList = ({
                             ))
                         }
                     
-                    
+                   
             </div>
         </>
     )
 }
 
-export default CategoryPageList
+const mapState = (state) => ({
+    isLiked:state.productsLike
+})
+const mapDispatch = (dispatch,{id}) => ({
+   
+    removeLike: () => dispatch({
+        type:"DISLIKE",
+        id
+    }),
+})
+export default connect(
+    mapState,
+    mapDispatch
+)(LikePage)

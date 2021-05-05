@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
-import {BlogPost,CategoryPage,ReadMorePage} from './PostFolder/BlogPost'
+import {BlogPost,CategoryPage,LikeProdPage,ReadMorePage} from './PostFolder/BlogPost'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import './main.css'
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop'
@@ -9,10 +9,8 @@ import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop'
 
 
 const Main = ({
-    openFilter,
-    filterState,
     scrollToTop,
-    
+    openScroll
 }) => {
     return (
         <main className="main" >
@@ -20,28 +18,22 @@ const Main = ({
                 <TransitionGroup>
                     <CSSTransition
                         key={location.key}
-                          
-                                appear={true}                
-                                timeout={500}
-                                classNames="fade">
+                        appear={true}                
+                        timeout={500}
+                        classNames="fade">
                         <Switch>
-                            <Route path="/" exact component={HomePage}/>    
-                            <Route path="/postlist" exact >
-                                
-                                    <BlogPost
-                                    openFilter={openFilter}
-                                    filterState={filterState} />
-                                
-                            
-                            </Route>
-                            <Route path="/postlist/postpage/:id" exact component={ReadMorePage}/>   
-                            <Route path="/categor/:id"   exact  component={CategoryPage}/>
+                            <Route exact path="/"  component={HomePage}/>    
+                            <Route path="/postlist"  component={BlogPost}/>
+                            <Route path="/postlist/postpage/:id"  component={ReadMorePage}/>   
+                            <Route path="/categor/:id"    component={CategoryPage}/>
+                            <Route path="/likepage"  component={LikeProdPage}/>    
                         </Switch>        
                     </CSSTransition>   
                 </TransitionGroup>
             )} />
             <ScrollToTop 
-            scrollToTop={scrollToTop}/>
+            scrollToTop={scrollToTop}
+            openScroll={openScroll}/>
         </main>
     )
 }
