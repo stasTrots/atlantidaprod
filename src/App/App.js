@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 import '../common/reset.css'
 import '../common/base.css'
@@ -17,7 +17,8 @@ class App extends Component {
 scrollToTop = () => {
   window.scrollTo({
     top:0,
-    behavior:'smooth'
+    behavior:'smooth',
+    smooth: true
   })
   this.setState({
     openScroll:false

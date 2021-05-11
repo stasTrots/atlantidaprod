@@ -46,7 +46,7 @@ class PostListItem extends Component {
                     <div className="like-item">
                     <button onClick={() => (isLiked) ? removeLike(id) && removeLikeObj(id) : addLike(id)} className="isLiked">
                     {isLiked ? <span>&#9829;</span> : <span>&#9825;</span>}
-                </button>
+                    </button>
                     </div>
                 </div>
                 <div className="item-text">

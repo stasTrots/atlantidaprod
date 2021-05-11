@@ -9,6 +9,8 @@ const PostPagesItem = ({
     postItem = getPostMore(posts),
     isLiked ,
     addLike,
+    removeLikeObj,
+    removeLike
 }) => {
     const id = match.params.id
     return(
@@ -35,9 +37,9 @@ const PostPagesItem = ({
                                 <Link to={`/categor/${postItem[id].categor}`} className="post-set-text item-set-text-categor">{postItem[id].categor}</Link>
                             </div>
                             <div className="like-item">
-                                <button  className="isLiked">
+                            <button onClick={() => (isLiked) ? removeLike(postItem[id].id) && removeLikeObj(postItem[id].id) : addLike(postItem[id].id)} className="isLiked">
                                 {isLiked ? <span>&#9829;</span> : <span>&#9825;</span>}
-                                </button>
+                            </button>
                             </div>
                         </div>
                         <div className="post-text">
@@ -75,7 +77,21 @@ const PostPagesItem = ({
 const mapState = (state,props) => ({
     isLiked:state.productsLike[props.match.params.id]
 })
-
+const mapDispatch = (dispatch) => ({
+    addLike: (id) => dispatch({
+        type:"LIKE",
+        id
+    }),
+    removeLike: (id) => dispatch({
+        type:"DISLIKE",
+        id
+    }),
+    removeLikeObj:(id)=>dispatch({
+        type:"REMOVE_LIKES_POSTS",
+        id,
+    }),
+})
 export default connect(
     mapState,
+    mapDispatch
 )(PostPagesItem)

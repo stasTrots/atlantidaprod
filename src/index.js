@@ -5,6 +5,7 @@ import { rootReducer } from './redux/rootReducer'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux';
 import App from './App/App';
+import ScrollRoute from './Components/ScrollToTop/ScrollRoute'
 
 const store = createStore(
   rootReducer,
@@ -14,6 +15,7 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
+      <ScrollRoute />
       <App />
     </BrowserRouter>
   </Provider>,

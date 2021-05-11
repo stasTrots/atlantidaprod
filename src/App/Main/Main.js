@@ -8,6 +8,7 @@ import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop'
 
 
 
+
 const Main = ({
     scrollToTop,
     openScroll
@@ -21,6 +22,7 @@ const Main = ({
                         appear={true}                
                         timeout={500}
                         classNames="fade">
+                        
                         <Switch>
                             <Route exact path="/"  component={HomePage}/>    
                             <Route exact path="/postlist"  component={BlogPost}/>
@@ -37,6 +39,7 @@ const Main = ({
         </main>
     )
 }
+
 
 
 

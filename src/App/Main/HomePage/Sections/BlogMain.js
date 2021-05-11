@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Aos from 'aos'
 import {Link } from 'react-router-dom'
+import posts from '../../PostFolder/Posts/Post'
 
 const BlogMain = () => {
     useEffect (() => {
@@ -25,48 +26,56 @@ const BlogMain = () => {
                 <div className="col-xs-12">
                     <div className="blog-main-list blog-main-none">
                         <div className="col-xs-6 col-sm-12">
-                            <div className="blog-main-item">
-                                <div className="blog-main-item-img">
-                                    <img src="/image/blog/b1.png" alt=""/>
+                        {
+                            posts.slice(0,2).map(({
+                                id,
+                                title,
+                                images,
+                                textLat,
+                                author,
+                                data,
+                            }) => (
+                                <div className="blog-main-item" key={id}>
+                                    <div className="blog-main-item-img">
+                                        <img src={images} alt=""/>
+                                    </div>
+                                    <div className="blog-main-item-text">
+                                        <i>{data} / By {author}</i>
+                                        <h3>{title}</h3>
+                                        <p>{textLat}</p>
+                                    </div>
+                                    <div className="blog-main-bg">
+                                    <Link to={`/postlist/postpage/${id}`} >Read More</Link>
+                                    </div>
                                 </div>
-                                <div className="blog-main-item-text">
-                                    <i>14 Aug 2015 / By Admin</i>
-                                    <h3>Donec id lobortis tellus Maecenas.</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. className aptent taciti sociosqu ad litora torquent per conubia nostra,  congue per inceptos himenaeos.</p>
-                                </div>
-                            </div>
-                            <div className="blog-main-item">
-                                <div className="blog-main-item-img">
-                                    <img src="/image/blog/b2.png" alt=""/>
-                                </div>
-                                <div className="blog-main-item-text">
-                                    <i>14 Aug 2015 / By Admin</i>
-                                    <h3>Donec id lobortis tellus Maecenas.</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. className aptent taciti sociosqu ad litora torquent per conubia nostra,  congue per inceptos himenaeos.</p>
-                                </div>
-                            </div>
-                        </div>
+                            ))
+                        }
+                        </div>    
                         <div className="col-xs-6 col-sm-12">
-                            <div className="blog-main-item">
-                                <div className="blog-main-item-img">
-                                    <img src="/image/blog/b3.png" alt=""/>
+                        {
+                            posts.slice(2,4).map(({
+                                id,
+                                title,
+                                images,
+                                textLat,
+                                author,
+                                data,
+                            }) => (
+                                <div className="blog-main-item" key={id}>
+                                    <div className="blog-main-item-img">
+                                        <img src={images} alt=""/>
+                                    </div>
+                                    <div className="blog-main-item-text">
+                                        <i>{data} / By {author}</i>
+                                        <h3>{title}</h3>
+                                        <p>{textLat}</p>
+                                    </div>
+                                    <div className="blog-main-bg">
+                                    <Link to={`/postlist/postpage/${id}`} >Read More</Link>
+                                    </div>
                                 </div>
-                                <div className="blog-main-item-text">
-                                    <i>14 Aug 2015 / By Admin</i>
-                                    <h3>Donec id lobortis tellus Maecenas.</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. className aptent taciti sociosqu ad litora torquent per conubia nostra,  congue per inceptos himenaeos.</p>
-                                </div>
-                            </div>
-                            <div className="blog-main-item">
-                                <div className="blog-main-item-img">
-                                    <img src="/image/blog/b4.png" alt=""/>
-                                </div>
-                                <div className="blog-main-item-text">
-                                    <i>14 Aug 2015 / By Admin</i>
-                                    <h3>Donec id lobortis tellus Maecenas.</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. className aptent taciti sociosqu ad litora torquent per conubia nostra,  congue per inceptos himenaeos.</p>
-                                </div>
-                            </div>
+                            ))
+                        }
                         </div>
                     </div>
                     <div className="mobile-btn-blog">
